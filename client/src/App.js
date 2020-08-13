@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Container from '@material-ui/core/Container';
 
 class App extends Component {
 
@@ -37,20 +36,22 @@ renderProduct = product => <div key={product.product_id}>
   render(){
     const {products, product} = this.state; 
     return (
-      <div className="App">
-        {products.map(this.renderProduct)}
+      <Container >
+        <div className="App">
+          {products.map(this.renderProduct)}
 
-        <div>
-          <input 
-            value={product.name} 
-            onChange={e => this.setState({ product: { ...product, name: e.target.value}})} />
-          <input 
-            value={product.price}
-            onChange={e => this.setState({ product: { ...product, price: e.target.value}})} 
-          />
-          <button onClick={this.addProduct}>Add Product</button>
+          <div>
+            <input 
+              value={product.name} 
+              onChange={e => this.setState({ product: { ...product, name: e.target.value}})} />
+            <input 
+              value={product.price}
+              onChange={e => this.setState({ product: { ...product, price: e.target.value}})} 
+            />
+            <button onClick={this.addProduct}>Add Product</button>
+          </div>
         </div>
-      </div>
+      </Container>
     );
   }
 }
