@@ -104,7 +104,7 @@ app.get("/comment", (req,res) => {
   const COMMENT_QUERY = `INSERT INTO comments 
   (Product_ID, Username, Date, Comment,Star) 
   VALUES(
-    "${product_id}", "${logged_username}", Date(), "${comment}", "${star})  `//////////////////////
+    ${product_id}, "${logged_username}", current_date(), "${comment}", ${star})  `//////////////////////
 
   connetion.query(COMMENT_QUERY, (err, results) => {
     if(err)

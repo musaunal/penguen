@@ -177,16 +177,6 @@ const Profile = () => {
         </Table>
       </TableContainer>
 
-      <Container style={{ marginTop: 60 }}>
-        <Grid container spacing={2} justify="center">
-          <Grid item>
-            <Button variant="contained" color="primary" component={Link} to="/order sum">
-              Buy
-              </Button>
-          </Grid>
-        </Grid>
-      </Container>
-
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
           The White Penguen Inc
